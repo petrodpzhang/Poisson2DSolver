@@ -1,0 +1,21 @@
+# Simple input file for Poisson2DSolver
+# Geometry
+lx = 2.0
+ly = 1.0
+nx = 20
+ny = 10
+element_type = quad
+
+# Functions (use simple expressions)
+initial_guess = 0
+source = 0
+source_derivative = 0
+
+# Solver parameters
+relative_tolerance = 1e-6
+absolute_tolerance = 1e-8
+max_iterations = 100
+
+# Output
+output_path = results.vtk
+

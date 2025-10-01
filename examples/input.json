@@ -1,0 +1,35 @@
+{
+    "geometry": {
+        "lx": 2.0,
+        "ly": 1.0,
+        "nx": 20,
+        "ny": 10,
+        "element_type": "quad"
+    },
+    "boundary_conditions": [
+        {
+            "type": "Dirichlet",
+            "boundary": "AD",
+            "value": 2.0
+        },
+        {
+            "type": "Dirichlet", 
+            "boundary": "BC",
+            "value": 1.0
+        }
+    ],
+    "functions": {
+        "initial_guess": "exp(-x - y)",
+        "source": "exp(-u)",
+        "source_derivative": "-exp(-u)"
+    },
+    "solver": {
+        "relative_tolerance": 1e-6,
+        "absolute_tolerance": 1e-8,
+        "max_iterations": 15000
+    },
+    "output": {
+        "path": "results.vtk",
+        "format": "vtk"
+    }
+}

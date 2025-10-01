@@ -1,0 +1,46 @@
+{
+    "geometry": {
+        "lx": 1.0,
+        "ly": 1.0,
+        "nx": 10,
+        "ny": 10,
+        "element_type": "quad"
+    },
+    "boundary_conditions": [
+        {
+            "type": "Dirichlet",
+            "boundary": "AD",
+            "value": 0.0
+        },
+        {
+            "type": "Dirichlet", 
+            "boundary": "BC",
+            "value": 0.0
+        },
+        {
+            "type": "Dirichlet",
+            "boundary": "AB",
+            "value": 0.0
+        },
+        {
+            "type": "Dirichlet",
+            "boundary": "CD",
+            "value": 1.0
+        }
+    ],
+    "functions": {
+        "initial_guess": "0",
+        "source": "0",
+        "source_derivative": "0"
+    },
+    "solver": {
+        "relative_tolerance": 1e-6,
+        "absolute_tolerance": 1e-8,
+        "max_iterations": 10
+    },
+    "output": {
+        "path": "laplace_results.vtk",
+        "format": "vtk"
+    }
+}
+
